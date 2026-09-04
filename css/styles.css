@@ -199,6 +199,7 @@ span {
 
 .classicos {
    display: flex;
+    justify-content: center;
    background-color: var(--cor-cards);
    margin-bottom: var(--espacamento-sm);
    overflow-x: auto;
