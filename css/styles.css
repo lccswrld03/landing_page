@@ -6,11 +6,27 @@
     --cor-da-fonte-principal: whitesmoke;
     --cor-da-fonte-secundaria: white;
     --cor-cards: #0b091b;
+    --cor-da-borda: oklch(28.998% 0.1249 266.062);
 
     --espacamento-sm: 16px;
     --espacamento-md: 32px;
     --espacamento-lg: 48px;
     --espacamento-vlg: 56px;
+
+    --fonte-titulo: "Press Start 2P", system-ui;
+    --fonte-cards-titulo: "DotGothic16", sans-serif;
+    --fonte-texto: "Oxanium", sans-serif;
+    --fonte-detalhe: "Orbitron", sans-serif;
+
+    --fonte-expessura-titulo: 400;
+    --fonte-expessura-texto: 300;
+    --fonte-expessura-detalhe: 400;
+
+    --fonte-estilo-titulo: normal;
+    --fonte-estilo-texto: normal;
+    --fonte-estilo-detalhe: uppercase;
+
+    --fonte-tamanho-titulo: 100%;
 }
 
 * {
@@ -19,16 +35,26 @@
     padding: 0;
 }
 
+header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 body {
+    width: 100%;
+    overflow-x: hidden;
     background-color: var(--cor-de-fundo);
     text-align: center;
 }
 
-h1, h2, h3 {
+h1 {
     color: var(--cor-da-fonte-principal);
+    font-family: var(--fonte-titulo);
+    font-weight: var(--fonte-expessura-titulo);
+    font-style: normal;
 }
 
-#historia h1 {
+#historia_consoles h1 {
     display: flex;
     align-items: center;
     height: 100px;
@@ -38,10 +64,25 @@ h1 {
     margin-top: var(--espacamento-vlg);
     margin-bottom: var(--espacamento-vlg);
     background-color: var(--cor-navegacao);
-    padding: 20px;
+    padding: 40px;
+    font-family: var(--fonte-detalhe);
+    font-size: var(--fonte-tamanho-titulo);
+    text-transform: uppercase;
 }
 
+h2,
 h3 {
+    padding: 10px;
+    text-transform: none;
+    font-family: var(--fonte-texto);
+    font-weight: var(--fonte-expessura-texto);
+    font-style: normal;
+    color: var(--cor-da-fonte-principal);
+}
+
+h4 {
+    font-family: var(--fonte-texto);
+    color: var(--cor-da-fonte-principal);
     padding: 10px;
 }
 
@@ -64,27 +105,20 @@ nav {
         display: flex;
         justify-self: center;
     }
-    
+
     .nav_logo {
         display: flex;
         justify-self: center;
     }
 
     .carrossel {
-       margin: 0 auto;
-       margin-bottom: var(--espacamento-sm);
+        margin: 0 auto;
+        margin-bottom: var(--espacamento-sm);
     }
 
-    #historia {
-         display: flex;
-         justify-content: center;
-         flex-wrap: wrap;
-    }
-
-    #historia h1 {
-        
-        text-align: center;
-
+    #nostalgia {
+        width: 100%;
+        overflow-x: hidden;
     }
 }
 
@@ -98,76 +132,131 @@ nav {
 p {
     color: var(--cor-da-fonte-principal);
     padding: 40px;
+    font-family: var(--fonte-texto);
+    font-weight: var(--fonte-expessura-texto);
+    font-style: var(--fonte-estilo-texto);
 }
 
 a {
     text-decoration: none;
     color: var(--cor-da-fonte-principal);
+    font-family: var(--fonte-detalhe);
+    font-weight: var(--fonte-expessura-detalhe);
+    font-style: var(--fonte-estilo-detalhe);
 }
 
 b {
     color: var(--cor-da-fonte-secundaria);
 }
 
-#historia {
-    display: flex;
+#historia-consoles {
     padding: 20px;
-    gap: 20px;
+    margin-top: var(--espacamento-vlg);
+    margin-bottom: var(--espacamento-vlg);
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-#historia .carrossel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    gap: 40px;
-    padding: 20px;
-    width: 300px;
-    background-color: var(--cor-cards);
-    border-radius: 8px;
-}
- .carrossel_2 {
+.carrossel-principal {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     gap: 40px;
-    padding: 20px;
-    width: 300px;
-    background-color: var(--cor-cards);
+    padding: 30px 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
     border-radius: 8px;
- }
-
-.carrossel::-webkit-scrollbar {
-    display: none;
 }
 
+/* 1. A largura/altura total da barra de rolagem */
+.carrossel-principal::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* 2. O "Trilho" (o fundo por onde a barrinha corre) */
+.carrossel-principal::-webkit-scrollbar-track {
+    background: #0f0f0f;
+    border-radius: 8px;
+    margin: 0 20px;
+}
+
+/* 3. A "Barrinha" (a parte que o usuário clica e arrasta) */
+.carrossel-principal::-webkit-scrollbar-thumb {
+    background: #4682b4;
+    border-radius: 8px;
+    border: 3px solid #0f0f0f;
+}
+
+/* 4. O efeito ao passar o mouse por cima da barrinha */
+.carrossel-principal::-webkit-scrollbar-thumb:hover {
+    background: #5dade2;
+}
+
+/* 1. A largura/altura total da barra de rolagem */
 .classicos::-webkit-scrollbar {
-    display: none;
+    height: 12px;
 }
 
-.carrossel_2::-webkit-scrollbar {
-    display: none;
+/* 2. o "Trilho" (o fundo por onde a barrinha corre) */
+.classicos::-webkit-scrollbar-track {
+    background: #0f0f0f;
+    border-radius: 8px;
+    margin: 0 20px;
 }
 
+/* 3. a "Barrinha" (a parte que o usuário clica e arrasta) */
+.classicos::-webkit-scrollbar-thumb {
+    background: #4682b4;
+    /* Um tom de azul para combinar com seu glow */
+    border-radius: 8px;
+    border: 3px solid #0f0f0f;
+    /* Cria um "falso padding" para a barrinha não encostar nos cantos do trilho */
+}
 
-.card, .card_2 {
+/* 4. o efeito ao passar o mouse por cima da barrinha */
+.classicos::-webkit-scrollbar-thumb:hover {
+    background: #5dade2;
+}
+
+.classicos .card {
     scroll-snap-align: center;
     flex-shrink: 0;
-    width: 300px;   
+    max-width: 200px;
 }
 
-.hst_img {
-    width: 200px;
-    height: 150px;
+.carrossel-principal .card {
+    flex: 0 0 320px;
+    scroll-snap-align: center;
+    background-color: var(--cor-cards);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 8px 16px var(--cor-da-borda);
 }
 
-.hst_img:hover {
-    box-shadow: 0 8px 16px gray;
+.carrossel-principal .hst_img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-top: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 8px 16px var(--cor-da-borda);
+}
+
+.carrossel-principal .hst_img:hover {
+
+
     transform: translateY(-6px);
 }
 
-@keyframes fadeInZoom {
+/* @keyframes fadeInZoom {
     0% {
         opacity: 0;
         transform: scale(0.8)
@@ -177,7 +266,7 @@ b {
         opacity: 1;
         transform: translateY(1);
     }
-}
+} */
 
 small {
     display: flex;
@@ -185,10 +274,24 @@ small {
     flex-wrap: wrap;
     color: var(--cor-da-fonte-principal);
     margin-top: var(--espacamento-sm);
+    font-family: var(--fonte-detalhe);
+    font-weight: var(--fonte-expessura-detalhe);
+    font-style: var(--fonte-estilo-detalhe);
 }
 
 span {
     color: var(--cor-da-fonte-principal);
+    font-family: var(--fonte-detalhe);
+    font-weight: var(--fonte-expessura-detalhe);
+    font-style: var(--fonte-estilo-detalhe);
+
+}
+
+#nostalgia {
+    margin-top: var(--espacamento-vlg);
+    margin-bottom: var(--espacamento-vlg);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 #nostalgia h3 {
@@ -198,36 +301,151 @@ span {
 }
 
 .classicos {
-   display: flex;
-   background-color: var(--cor-cards);
-   margin-bottom: var(--espacamento-sm);
-   overflow-x: auto;
+    display: flex;
+    background-color: var(--cor-cards);
+    margin-bottom: var(--espacamento-sm);
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     padding: 20px;
-   
+    max-width: 100%;
 }
 
-#nostalgia .card {
+#nostalgia .card,
+.card_2 {
     scroll-snap-align: center;
     flex-shrink: 0;
-    width: 300px;
+    width: 280px;
+    gap: 20px;
+    margin: 0;
 }
 
 .classicos_img {
-    flex: 0 0 320px;
+    max-width: 80%;
     height: 180px;
-    width: 250px;
     flex-shrink: 0;
-    border: 6px solid goldenrod;
+    border: 6px outset var(--cor-da-borda);
+    object-fit: cover;
 }
 
 .classicos_img:hover {
-     box-shadow: 0 8px 16px gray;
+    box-shadow: 0 8px 16px gray;
     transform: translateY(-6px);
 }
 
 button {
     margin-top: var(--espacamento-sm);
     width: 80px;
+}
+
+button:hover {
+    box-shadow: 0 2px 8px black;
+    transform: translateY(-2px);
+}
+
+#eras {
+    margin-top: var(--espacamento-vlg);
+    margin-bottom: var(--espacamento-vlg);
+}
+
+#eras h1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.eras {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.img_eras {
+    border-radius: 10px;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .img_eras {
+        width: 80%;
+    }
+
+    .carrossel-principal .card {
+        flex: 0 0 420px;
+    }
+}
+
+@media (min-width: 840px) {
+     .classicos {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+     .img_eras {
+        width: 80%;
+    }
+
+    .carrossel-principal .card {
+        flex: 0 0 340px;
+    }
+
+    .carrossel-principal {
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .img_eras {
+        width: 80%;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: var(--cor-navegacao);
+    color: var(--cor-da-fonte-principal);
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    height: 200px;
+
+}
+
+.footer_superior {
+
+    display: flex;
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-inferior {
+    background-color: var(--cor-navegacao);
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.footer-inferior p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--cor-da-fonte-principal);
+}
+
+.footer_logos {
+    display: flex;
+    gap: 15px;
+}
+
+.img_logo {
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: auto;
 }
