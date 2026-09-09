@@ -369,7 +369,7 @@ button:hover {
 
 @media (min-width: 1024px) {
     .img_eras {
-        width: 80%;
+        width: 75%;
     }
 
     .carrossel-principal .card {
@@ -386,7 +386,7 @@ button:hover {
 
 @media (max-width: 768px) {
      .img_eras {
-        width: 80%;
+        width: 75%;
     }
 
     .carrossel-principal .card {
@@ -398,11 +398,21 @@ button:hover {
         padding: 40px 20px;
     }
 
+    .img_logo {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    footer {
+       
+        flex-wrap: wrap;
+    }
+
 }
 
 @media (min-width: 768px) {
     .img_eras {
-        width: 80%;
+        width: 75%;
     }
 }
 
@@ -410,26 +420,34 @@ footer {
     width: 100%;
     background-color: var(--cor-navegacao);
     color: var(--cor-da-fonte-principal);
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-    height: 200px;
+    justify-content: center;
+    margin-top: auto;    
+    /* height: 300px; */
+    margin-bottom: 0;
 
 }
 
 .footer_superior {
 
-    display: flex;
+  
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
     padding: 20px 40px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap: 20px;
 }
 
-.footer-inferior {
+.footer-creditos {
+/* display: grid;
+grid-template-rows: 8px 8px; */
     background-color: var(--cor-navegacao);
     text-align: center;
     padding: 10px 0;
     width: 100%;
+    font-size: smaller;
 }
 
 .footer-inferior p {
@@ -438,14 +456,39 @@ footer {
     color: var(--cor-da-fonte-principal);
 }
 
-.footer_logos {
-    display: flex;
+.footer-logos {
+   display: flex;
+   align-items: center;
+   
+   
     gap: 15px;
+    padding: 20px;
 }
 
-.img_logo {
-    display: flex;
-    align-items: center;
-    width: 48px;
+.creditos-logos {
+   font-size: smaller;
+   
+}
+
+
+
+.contato a {
+    font-size: 75%;
+}
+
+.img-logo {
+
+    margin-left: 20px;
+    width: 42px;
     height: auto;
 }
+
+.wpp-logo {
+    width: 36px;
+    height: auto;
+}
+
+.carrossel-principal a {
+    font-size: 60%;
+}
+
