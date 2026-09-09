@@ -66,6 +66,10 @@ h1 {
     height: 100px;
 }
 
+h2 {
+    text-shadow: 1px black;
+}
+
 h2,
 h3 {
     padding: 10px;
@@ -88,7 +92,7 @@ nav {
     box-shadow: 0 8px 16px var(--cor-da-borda);
 }
 
-.nav_links {
+.nav-links {
     display: flex;
     align-items: center;
     justify-self: end;
@@ -98,12 +102,12 @@ nav {
 
 @media (max-width: 750px) {
 
-    .nav_links {
+    .nav-links {
         display: flex;
         justify-self: center;
     }
 
-    .nav_logo {
+    .nav-logo {
         display: flex;
         justify-self: center;
     }
@@ -119,7 +123,7 @@ nav {
     }
 }
 
-.nav_logo {
+.nav-logo {
     display: flex;
     align-items: center;
     width: 250px;
@@ -247,9 +251,11 @@ b {
     box-shadow: 0 8px 16px var(--cor-da-borda);
 }
 
+.nav-links a:hover {
+    transform: translateY(-6px);
+}
+
 .carrossel-principal .hst_img:hover {
-
-
     transform: translateY(-6px);
 }
 
@@ -321,12 +327,12 @@ span {
     max-width: 80%;
     height: 180px;
     flex-shrink: 0;
-    border: 6px outset var(--cor-da-borda);
+    border: 4px outset var(--cor-da-borda);
     object-fit: cover;
 }
 
 .classicos_img:hover {
-    box-shadow: 0 8px 16px gray;
+    box-shadow: 0 8px 16px var(--cor-da-borda);
     transform: translateY(-6px);
 }
 
