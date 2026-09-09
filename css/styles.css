@@ -85,6 +85,7 @@ h4 {
 nav {
     background-color: var(--cor-navegacao);
     margin-bottom: var(--espacamento-md);
+    box-shadow: 0 8px 16px var(--cor-da-borda);
 }
 
 .nav_links {
@@ -374,14 +375,14 @@ button:hover {
 }
 
 @media (min-width: 840px) {
-     .classicos {
+    .classicos {
         display: flex;
         justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
-     .img_eras {
+    .img_eras {
         width: 75%;
     }
 
@@ -400,7 +401,7 @@ button:hover {
     }
 
     footer {
-       
+
         flex-wrap: wrap;
     }
 
@@ -419,26 +420,16 @@ footer {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: auto;    
-    /* height: 300px; */
+    margin-top: auto;
     margin-bottom: 0;
-
 }
 
 .footer_superior {
-
-  
-    /* display: flex;
-    justify-content: center;
-    flex-wrap: wrap; */
     padding: 20px 40px;
-    /* flex-wrap: wrap; */
     gap: 20px;
 }
 
 .footer-creditos {
-/* display: grid;
-grid-template-rows: 8px 8px; */
     background-color: var(--cor-navegacao);
     text-align: center;
     padding: 10px 0;
@@ -453,20 +444,16 @@ grid-template-rows: 8px 8px; */
 }
 
 .footer-logos {
-   display: flex;
-   align-items: center;
-   
-   
+    display: flex;
+    align-items: center;
     gap: 15px;
     padding: 20px;
 }
 
 .creditos-logos {
-   font-size: smaller;
-   
+    font-size: smaller;
+
 }
-
-
 
 .contato a {
     font-size: 75%;
@@ -487,4 +474,3 @@ grid-template-rows: 8px 8px; */
 .carrossel-principal a {
     font-size: 60%;
 }
-
