@@ -13,7 +13,7 @@
     --espacamento-lg: 48px;
     --espacamento-vlg: 56px;
 
-    --fonte-titulo: "Press Start 2P", system-ui;
+    --fonte-titulo: "Squada One", sans-serif;
     --fonte-cards-titulo: "DotGothic16", sans-serif;
     --fonte-texto: "Oxanium", sans-serif;
     --fonte-detalhe: "Orbitron", sans-serif;
@@ -52,22 +52,18 @@ h1 {
     font-family: var(--fonte-titulo);
     font-weight: var(--fonte-expessura-titulo);
     font-style: normal;
+    text-transform: uppercase;
+    text-shadow: 1px black;
+    margin-top: var(--espacamento-vlg);
+    margin-bottom: var(--espacamento-vlg);
+    background-color: var(--cor-navegacao);
+    padding: 40px;
 }
 
 #historia_consoles h1 {
     display: flex;
     align-items: center;
     height: 100px;
-}
-
-h1 {
-    margin-top: var(--espacamento-vlg);
-    margin-bottom: var(--espacamento-vlg);
-    background-color: var(--cor-navegacao);
-    padding: 40px;
-    font-family: var(--fonte-detalhe);
-    font-size: var(--fonte-tamanho-titulo);
-    text-transform: uppercase;
 }
 
 h2,
@@ -369,7 +365,7 @@ button:hover {
 
 @media (min-width: 1024px) {
     .img_eras {
-        width: 75%;
+        width: 70%;
     }
 
     .carrossel-principal .card {
