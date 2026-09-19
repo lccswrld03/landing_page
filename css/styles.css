@@ -303,6 +303,14 @@ span {
     gap: 20px;
 }
 
+#nostalgia h2 {
+    font-size: 80%;
+}
+
+#nostalgia a {
+    font-size: 50%;
+}
+
 .classicos {
     display: flex;
     background-color: var(--cor-cards);
@@ -321,17 +329,22 @@ span {
     width: 280px;
     gap: 20px;
     margin: 0;
+    max-width: 100%;
 }
 
-.classicos_img {
-    max-width: 80%;
-    height: 180px;
+
+
+.gif-classicos {
+    max-width: 60%;
+   
+    height: 100px;
     flex-shrink: 0;
     border: 4px outset var(--cor-da-borda);
     object-fit: cover;
+    background-color: var(--cor-cards);
 }
 
-.classicos_img:hover {
+.gif-classicos:hover {
     box-shadow: 0 8px 16px var(--cor-da-borda);
     transform: translateY(-6px);
 }
@@ -357,22 +370,32 @@ button:hover {
     gap: 20px;
 }
 
-.eras {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+#eras span {
+    font-size: 60%;
+    font-family: "Press Start 2P", system-ui;
 }
 
-.img_eras {
+.card-eras {
+    height: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+
+.img-eras {
     border-radius: 10px;
     height: auto;
-    max-width: 100%;
+    max-width: 60%;
+    gap: 20px;
+    box-shadow: 0 0 10px black;
+    border: 4px solid black;
 }
 
+
+
 @media (min-width: 1024px) {
-    .img_eras {
-        width: 70%;
+    .img-eras {
+        width: 60%;
     }
 
     .carrossel-principal .card {
@@ -388,7 +411,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    .img_eras {
+    .img-eras {
         width: 90%;
     }
 
@@ -406,15 +429,10 @@ button:hover {
         flex-wrap: nowrap;
     }
 
-    footer {
-
-        flex-wrap: wrap;
-    }
-
 }
 
 @media (min-width: 768px) {
-    .img_eras {
+    .img-eras {
         width: 75%;
     }
 }
@@ -424,10 +442,16 @@ footer {
     background-color: var(--cor-navegacao);
     color: var(--cor-da-fonte-principal);
     align-items: center;
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     margin-top: auto;
     margin-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, min-max(250px, 1fr));
+    box-shadow: 0 8px 16px var(--cor-da-borda);
+    border-top: 1px dotted var(--cor-da-borda);
+    border-radius: 8px;
+
 }
 
 .footer_superior {
@@ -441,10 +465,21 @@ footer {
     padding: 10px 0;
     width: 100%;
     font-size: smaller;
+
+    border-top: 1px dotted var(--cor-da-borda);
+    border-radius: 8px;
+    /* border-left: 1px solid whitesmoke;
+    border-right: 1px solid whitesmoke; */
+}
+
+.contato {
+    display: grid;
+    justify-content: end;
+    padding: 20px;
 }
 
 .footer-inferior p {
-    margin: 0;
+
     font-size: 0.85rem;
     color: var(--cor-da-fonte-principal);
 }
@@ -452,17 +487,9 @@ footer {
 .footer-logos {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 15px;
     padding: 20px;
-}
-
-.creditos-logos {
-    font-size: smaller;
-
-}
-
-.contato a {
-    font-size: 75%;
 }
 
 .img-logo {
